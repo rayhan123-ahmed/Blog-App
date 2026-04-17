@@ -16,7 +16,13 @@ addPostBtn.addEventListener("click", () => {
   post.innerHTML = `
    <h2>${title}</h2>
    <p>${content}</p>
+   <button class='delete-btn'>Delete</button>
   `;
+  const deleteBtn = post.querySelector(".delete-btn");
+  deleteBtn.addEventListener("click", () => {
+    post.remove();
+  });
+
   postsContainer.appendChild(post);
 
   titleInput.value = "";

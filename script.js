@@ -13,6 +13,7 @@ addPostBtn.addEventListener("click", () => {
     return;
   }
   const post = document.createElement("div");
+  post.classList.add('post')
   post.innerHTML = `
    <h2>${title}</h2>
    <p>${content}</p>

@@ -134,3 +134,7 @@ textarea:focus {
 .delete-btn span{
     font-size: 20px;
 }
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+}

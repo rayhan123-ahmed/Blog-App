@@ -17,7 +17,10 @@ addPostBtn.addEventListener("click", () => {
   post.innerHTML = `
    <h2>${title}</h2>
    <p>${content}</p>
-   <button class='delete-btn'>Delete</button>
+   <button class='delete-btn'><span class="material-symbols-outlined">
+delete
+</span>
+Delete</button>
   `;
   const deleteBtn = post.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", () => {

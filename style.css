@@ -122,7 +122,6 @@ textarea:focus {
     gap: 3px;
     font-size: 12px;
     align-items: center;
-    margin-top: 12px;
     background: transparent;
     border: none;
     color: rgb(199, 8, 8);
@@ -137,4 +136,16 @@ textarea:focus {
 .btn-container{
     display: flex;
     justify-content: flex-end;
+}
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+.date{
+    color: #babec1;
+    font-size: 14px;
 }

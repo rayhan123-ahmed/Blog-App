@@ -114,6 +114,7 @@ textarea:focus {
 .post p {
     overflow-wrap: anywhere;
     color: #546e7a;
+    white-space: pre-line;
     line-height: 1.6;
     font-size: 1rem;
 }

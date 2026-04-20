@@ -4,7 +4,7 @@ const contentInput = document.querySelector("#contentInput");
 const addPostBtn = document.querySelector("#addPostBtn");
 const postsContainer = document.querySelector("#postsContainer");
 
-const date = new Date();
+
 
 let store = JSON.parse(localStorage.getItem("store")) || [];
 
@@ -16,6 +16,8 @@ addPostBtn.addEventListener("click", () => {
     alert("right something!");
     return;
   }
+
+  const date = new Date();
 
   const dateString = date.toLocaleDateString("en-GB", {
     day: "2-digit",
@@ -33,7 +35,7 @@ addPostBtn.addEventListener("click", () => {
 
   localStorage.setItem("store", JSON.stringify(store));
 
-  createPost(postData, store.legnth - 1);
+ createPost(postData, store.length - 1);
 
   titleInput.value = "";
   contentInput.value = "";

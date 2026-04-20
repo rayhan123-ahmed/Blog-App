@@ -102,8 +102,20 @@ textarea:focus {
     font-size: 1rem;
 }
 .delete-btn {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    font-size: 12px;
+    align-items: center;
     margin-top: 12px;
     background: transparent;
     border: none;
     color: rgb(199, 8, 8);
+    transition:all 0.3s ;
+}
+.delete-btn:hover {
+   color: rgb(129, 10, 10);
+}
+.delete-btn span{
+    font-size: 20px;
 }

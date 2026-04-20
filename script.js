@@ -13,14 +13,13 @@ addPostBtn.addEventListener("click", () => {
     return;
   }
   const post = document.createElement("div");
-  post.classList.add('post')
+  post.classList.add("post");
   post.innerHTML = `
    <h2>${title}</h2>
    <p>${content}</p>
-   <button class='delete-btn'><span class="material-symbols-outlined">
-delete
-</span>
-Delete</button>
+   <button class='delete-btn'><span class="material-symbols-outlined">delete</span>
+   Delete
+</button>
   `;
   const deleteBtn = post.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", () => {

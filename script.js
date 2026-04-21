@@ -52,7 +52,7 @@ function createPost(data, index) {
    <small class='date'>${data.date}</small>
    <div class='btn-container'>
  <button class='edit-btn'><span class="material-symbols-outlined">edit</span>
-   Delete
+   Edit
 </button>
  <button class='delete-btn'><span class="material-symbols-outlined">delete</span>
    Delete

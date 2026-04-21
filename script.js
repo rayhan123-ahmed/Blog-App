@@ -46,8 +46,8 @@ function createPost(data, index) {
   const post = document.createElement("div");
   post.classList.add("post");
   post.innerHTML = `
-   <h2>${data.title}</h2>
-   <p>${data.content}</p>
+   <h2 class='title'>${data.title}</h2>
+   <p class='content'>${data.content}</p>
    <div class='post-footer'>
    <small class='date'>${data.date}</small>
    <div class='btn-container'>
@@ -67,6 +67,37 @@ function createPost(data, index) {
     localStorage.setItem("store", JSON.stringify(store));
     post.remove();
   });
+
+  const editBtn = post.querySelector(".edit-btn");
+  const titleEl = post.querySelector(".title");
+  const contentEl = post.querySelector(".content");
+
+  let isEditing = false;
+
+  editBtn.addEventListener("click", () => {
+    if (!isEditing) {
+      titleEl.innerHTML = `<input type="text" value="${data.title}" class="edit-title">`;
+      contentEl.innerHTML = `<textarea class="edit-content">${data.content}</textarea>`;
+
+      editBtn.innerText = `save`;
+      isEditing = true;
+    } else {
+      const newTitle = post.querySelector(".edit-title").value;
+      const newContent = post.querySelector(".edit-content").value;
+
+      titleEl.innerText = newTitle;
+      contentEl.innerText = newContent;
+
+      store[index].title = newTitle;
+      store[index].content = newContent;
+      localStorage.setItem("store", JSON.stringify(store));
+
+      editBtn.innerHTML = `<button class='edit-btn'><span class="material-symbols-outlined">edit</span>Edit</button>`;
+
+      isEditing = false;
+    }
+  });
+ 
 
   postsContainer.appendChild(post);
 }

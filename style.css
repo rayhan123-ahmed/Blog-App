@@ -81,10 +81,10 @@ textarea:focus {
     line-height: 1.6;
 }
 .post {
-      overflow: hidden;
+    overflow: hidden;
     width: 100%;
     background: #ffffff;
-    padding: 25px;
+    padding: 10px 15px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #eef0f2;
@@ -118,11 +118,12 @@ textarea:focus {
     line-height: 1.6;
     font-size: 1rem;
 }
-.delete-btn {
+.delete-btn,
+.edit-btn {
     display: flex;
     justify-content: center;
     gap: 3px;
-    font-size: 12px;
+    font-size: 10px;
     align-items: center;
     background: transparent;
     border: none;
@@ -133,21 +134,29 @@ textarea:focus {
    color: rgb(129, 10, 10);
 }
 .delete-btn span{
-    font-size: 20px;
+    font-size: 15px;
 }
-.btn-container{
+.edit-btn span{
+    font-size: 15px;
+}
+.edit-btn{
+    color: #0b8d87;
+}
+.btn-container {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 .post-footer {
     display: flex;
-    justify-content: space-between;
     text-align: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 15px;
     padding-top: 10px;
+    gap: 20px;
 }
 .date{
     color: #babec1;
-    font-size: 14px;
+    font-size: 10px;
 }
